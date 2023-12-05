@@ -1,0 +1,126 @@
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Dorie', 'Wiewiorka', 6);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Barbi', 'Jak', 8);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Mabelle', 'Goldeneye', 10);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Amery', 'Pies', 7);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Bernard', 'Pancernik', 6);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Micky', 'Kangur', 9);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Cherise', 'Indyk', 8);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Iosep', 'Hiena', 3);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Audrye', 'Slimak', 1);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Zola', 'Szczur', 2);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Gerrie', 'Jaguar', 1);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Janean', 'Gekon', 9);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Bili', 'Lis', 9);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Binky', 'Papuga', 5);
+insert into WROGOWIE (imie, gatunek, stopien_wrogosci) values ('Lynnelle', 'Wiewiorka', 4);
+
+insert into FUNKCJE (NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY) values ('wojownik', 2, 7);
+insert into FUNKCJE (NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY) values ('zast_przywodcy', 5, 9);
+insert into FUNKCJE (NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY) values ('przywodca', 10, 20);
+insert into FUNKCJE (NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY) values ('medyk', 7, 10);
+insert into FUNKCJE (NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY) values ('lowca', 3, 5);
+insert into FUNKCJE (NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY) values ('chemik', 1, 6);
+insert into FUNKCJE (NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY) values ('skarbnik', 10, 13);
+insert into FUNKCJE (NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY) values ('kowal', 1, 4);
+insert into FUNKCJE (NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY) values ('budowlaniec', 1, 5);
+insert into FUNKCJE (NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY) values ('handlarz', 1, 5);
+
+alter table KOTY drop constraint KOT_NR_BANDY_FK;
+alter table KOTY drop constraint SYS_C00419879;
+alter table KOTY drop constraint SYS_C00419878;
+
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('Tygrys', 'M', TO_DATE('1999.12.14', 'YYYY.MM.DD'),30, NULL, 1, 'szef');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('KsiezPolowa', 'K', TO_DATE('1998.03.24', 'YYYY.MM.DD'), 15,'Tygrys', 12, 'przywodca');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('PojeGwiazda', 'M', TO_DATE('2017.03.21', 'YYYY.MM.DD'), 18,'Tygrys', 23, 'przywodca');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('MgliGwiazda', 'K', TO_DATE('2013.01.26', 'YYYY.MM.DD'), 20,'Tygrys', 45, 'przywodca');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('LiscieOpadle', 'M', TO_DATE('1999.12.15', 'YYYY.MM.DD'), 5,'KsiezPolowa', 12, 'wojownik');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('CzarGwiazda', 'M', TO_DATE('2014.05.16', 'YYYY.MM.DD'), 16,'Tygrys', 34, 'przywodca');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('SkrzySojki', 'M', TO_DATE('1998.02.16', 'YYYY.MM.DD'), 7,'KsiezPolowa', 12, 'wojownik');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('JanoStopa', 'M', TO_DATE('2020.04.18', 'YYYY.MM.DD'), 8,'PojeGwiazda', 23, 'zast_przywodcy');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('PustulLot', 'M', TO_DATE('2019.08.18', 'YYYY.MM.DD'), 8,'PojeGwiazda', 23, 'medyk');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('JasnSerce', 'K', TO_DATE('2021.04.28', 'YYYY.MM.DD'), 4,'KsiezPolowa', 12, 'wojownik');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('Szara Mgla', 'K', TO_DATE('2018.04.07', 'YYYY.MM.DD'), 2,'MgliGwiazda', 45, 'wojownik');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('WysGwiazda', 'M', TO_DATE('2016.02.18', 'YYYY.MM.DD'), 19,'Tygrys', 23, 'przywodca');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('Gesie Pioro', 'M', TO_DATE('2004.05.26', 'YYYY.MM.DD'), 8,'KsiezPolowa', 12, 'medyk');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('SosnSerce', 'M', TO_DATE('2018.07.04', 'YYYY.MM.DD'), 9,'KsiezPolowa', 12, 'zast_przywodcy');
+insert into KOTY (PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI) values ('BlekiGwiazda', 'K', TO_DATE('2015.09.17', 'YYYY.MM.DD'), 16,'Tygrys', 33, 'przywodca');
+
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (1, 'caly', 'Szefostwo', 'Tygrys');
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (12, 'gory', 'Zaby', 'KsiezPolowa');
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (33, 'nad jeziorem', 'Pioruna', 'BlekiGwiazda');
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (23, 'wrzosowiska', 'Wiatru', 'PojeGwiazda');
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (34, 'las sosnowy','Cienia', 'CzarGwiazda');
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (45, 'rownina', 'Rzeki', 'MgliGwiazda');
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (56, 'wawoz', 'Nieba', NULL);
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (67, 'jaskinia','Jaskini', NULL);
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (78, 'plaza', 'Wody', NULL);
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (89, 'las', 'Ognia', NULL);
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (90, 'wodospad', 'Ziemi', NULL);
+insert into BANDY (NR_BANDY, TEREN, NAZWA, SZEF_BANDY) values (20, 'wiesDwunoznych','Krwi', NULL);
+
+ALTER TABLE Koty ADD CONSTRAINT KOT_NR_BANDY_FK FOREIGN KEY (nr_bandy) REFERENCES Bandy(nr_bandy);
+ALTER TABLE Koty ADD CONSTRAINT KOT_FUNKCJE_FK FOREIGN KEY (NAZWA_FUNKCJI) REFERENCES FUNKCJE(NAZWA_FUNKCJI);
+ALTER TABLE Koty ADD CONSTRAINT KOT_KOTY_FK FOREIGN KEY (PSEUDO_SZEFA) REFERENCES KOTY(PSEUDO);
+
+
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('16/06/2020'),'nulla dapibus dolor vel', 'CzarGwiazda','Dorie');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('08/10/2020'),'fusce posuere felis sed', 'Tygrys','Barbi');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('02/11/2020'),'nascetur ridiculus mus vivamus', 'LiscieOpadle','Mabelle');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('23/10/2022'),'integer ac neque duis','KsiezPolowa','Amery');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('18/10/2020'),'turpis sed ante', 'CzarGwiazda', 'Bernard');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('20/04/2022'),'volutpat eleifend donec dolor','SkrzySojki','Micky');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('09/01/2022'),'pharetra metus', 'JanoStopa','Cherise');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('10/03/2021'),'lobortis eleifend', 'PustulLot', 'Iosep');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('13/12/2022'),'nulla', 'JasnSerce','Audrye');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('17/08/2021'),'dui proin', 'PojeGwiazda','Zola');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('03/02/2020'),'eu orci mauris lacinia','MgliGwiazda','Gerrie');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('14/11/2020'),'suscipit ligula in lacus','Szara Mgla','Janean');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('13/02/2022'),'at','Szara Mgla','Bili');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('02/08/2021'),'felis','WysGwiazda','Bernard');
+insert into INCYDENTY (DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE) values (TO_DATE('06/03/2021'),'amet erat nulla tempus vivamus','BlekiGwiazda','Gerrie');
+
+
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (1, 4.03, 3.09, TO_DATE('05/12/2021'), TO_DATE('01/06/2022'), 'LiscieOpadle', 'SkrzySojki');
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (2, 5.23, 3.11, TO_DATE('14/02/2020'), TO_DATE('02/11/2021'), 'SosnSerce', 'Szara Mgla');
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (3, 4.74, 3.55, TO_DATE('27/07/2018'), TO_DATE('21/07/2019'), 'Szara Mgla', 'JanoStopa');
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (4, 3.92, 4.55, TO_DATE('06/10/2019'), TO_DATE('18/05/2020'), 'SosnSerce' , 'JanoStopa');
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (5, 0.53, 4.45, TO_DATE('16/11/2019'), TO_DATE('14/08/2020'), 'SkrzySojki' , 'BlekiGwiazda');
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (6, 2.58, 4.32, TO_DATE('21/02/2022'), TO_DATE('15/03/2022'),'BlekiGwiazda' ,NULL);
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (7, 8.64, 2.04, TO_DATE('22/07/2019'), TO_DATE('25/01/2022'),'JanoStopa' , 'BlekiGwiazda' );
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (8, 7.37, 2.08, TO_DATE('17/07/2021'), TO_DATE('27/11/2021'), 'SkrzySojki',  NULL);
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (9, 7.38, 3.27, TO_DATE('08/11/2019'), TO_DATE('13/01/2020'),'JanoStopa' ,'KsiezPolowa' );
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (10, 1.48, 1.67, TO_DATE('03/08/2016'), TO_DATE('12/02/2022'),'BlekiGwiazda' , 'LiscieOpadle');
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (11, 8.3, 3.07, TO_DATE('13/07/2019'), TO_DATE('08/01/2021'), 'WysGwiazda', 'Gesie Pioro' );
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (12, 2.69, 2.15, TO_DATE('03/03/2017'), TO_DATE('11/09/2022'), 'WysGwiazda', 'SosnSerce');
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (13, 8.15, 1.47, TO_DATE('26/07/2017'), TO_DATE('27/05/2019'), 'KsiezPolowa', 'Gesie Pioro');
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (14, 1.96, 3.34, TO_DATE('07/05/2019'), TO_DATE('02/09/2021'), 'KsiezPolowa', 'Gesie Pioro');
+insert into MYSZY (nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA) values (15, 8.88, 2.57, TO_DATE('13/03/2020'), TO_DATE('04/03/2022'),'LiscieOpadle' , 'SosnSerce');
+
+insert into LAPOWKI (LAPOWKA) values ('szynka');
+insert into LAPOWKI (LAPOWKA) values ('pizza');
+insert into LAPOWKI (LAPOWKA) values ('pomidor');
+insert into LAPOWKI (LAPOWKA) values ('ogorek');
+insert into LAPOWKI (LAPOWKA) values ('kosc');
+insert into LAPOWKI (LAPOWKA) values ('mango');
+insert into LAPOWKI (LAPOWKA) values ('pestki dyni');
+insert into LAPOWKI (LAPOWKA) values ('pszenica');
+insert into LAPOWKI (LAPOWKA) values ('owies');
+insert into LAPOWKI (LAPOWKA) values ('orzechy');
+insert into LAPOWKI (LAPOWKA) values ('dziczyzna');
+insert into LAPOWKI (LAPOWKA) values ('kurczak');
+insert into LAPOWKI (LAPOWKA) values ('wieprzowina');
+insert into LAPOWKI (LAPOWKA) values ('jagniecina');
+insert into LAPOWKI (LAPOWKA) values ('piwo');
+insert into LAPOWKI (LAPOWKA) values ('papierosy');
+
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Micky','szynka');
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Janean','pomidor');
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Binky','kosc');
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Micky','pestki dyni');
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Janean','orzechy');
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Gerrie','pizza');
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Lynnelle','mango');
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Binky','ogorek');
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Cherise', 'kurczak');
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Dorie','jagniecina');
+insert into LAPOWKI_WROGOW(IMIE, LAPOWKA) values ('Iosep', 'orzechy');

@@ -1,0 +1,124 @@
+#KOTY[PSEUDO, PLEC, DATA_WSTAPIENIA, PRZYDZIAL_MYSZY, PSEUDO_SZEFA, NR_BANDY, NAZWA_FUNKCJI]
+'Tygrys', 'M', '1999.12.14', 0, 11111, 'szef'
+'Liscie Opadle', 'M', '1999.12.15', 0, 12345, 'wojownik'
+'Ksiezyca Polowa', 'K', '1998.03.24', 0, 12345, 'przywodca klanu'
+'Czarna Gwiazda', 'M', '2014.05.16', 0, 34567, 'przywodca klanu'
+'Skrzydlo Sojki', 'M', '1998.02.16', 0, 12345, 'wojownik'
+'Janowcowa Stopa', 'M', '2020.04.18', 0, 23456, 'zastepca przywodcy'
+'Pustulkowy Lot', 'M', '2019.08.18', 0, 23456, 'medyk'
+'Jasne Serce', 'K', '2021.04.28', 0, 12345, 'wojownik'
+'Pojedyncza Gwiazda', 'M', '2017.03.21', 0, 23456, 'przywodca klanu'
+'Mglista Gwiazda', 'K', '2013.01.26', 0, 45678, 'przywodca klanu'
+'Szara Mgla', 'K', '2018.04.07', 0, 45678, 'wojownik'
+'Wysoka Gwiazda', 'M', '2016.02.18', 0, 23456, 'przywodca klanu'
+'Gesie Pioro', 'M', '2004.05.26', 0, 12345, 'medyk'
+'Sosnowe Serce', 'M', '2018.07.04', 0, 12345, 'zastepca przywodcy'
+'Blekitna Gwiazda', 'K', '2015.09.17', 0, 2345, 'przywodca klanu'
+
+#bandy[NR_BANDY, TEREN, NAZWA, SZEF_BANDY]
+11111, 'caly', 'Szefostwo', 'Tygrys'
+12345, 'gory', 'Plemie Plynacej Wody', 'Ksiezyca Polowa'
+12346, 'las nad jeziorem', 'Klan Pioruna', 'Blekitna Gwiazda'
+23456, 'wrzosowiska nad jeziorem', 'Klan Wiatru', 'Pojedyncza Gwiazda'
+34567, 'las sosnowy nad jeziorem',' Klan Cienia', 'Czarna Gwiazda'
+45678, 'rownina nad jeziorem', 'Klan Rzeki', 'Mglista Gwiazda'
+56789, 'wawoz', 'Klan Nieba', 'Chmurna Gwiazda'
+67890, 'jaskinia','Klan Jaskini', 'Kamienna Gwiazda'
+78901, 'plaza', 'Klan Wody', 'Plotkowa Gwiazda'
+89012, 'las', 'Klan Ognia', 'Plomienny Ogon'
+90123, 'wodospad', 'Klan Ziemi', 'Brunatna Gwiazda'
+02345, 'siedlisko Dwunoznych',' Klan Krwi', 'Bicz'
+
+#myszy[nr_myszy, waga, dlugosc, data_upolowania, data_wydania, PSEUDO_LAPACZA, PSEUDO_ZJADACZA]
+1, 4.03, 3.09, '05/12/2021', '01/06/2022', 'Liście Opadle', 'Skrzydlo Sojki'
+2, 5.23, 3.11, '14/02/2022', '02/11/2021', 'Sosnowe Serce', 'Szara Mgla'
+3, 4.74, 3.55, '27/07/2022', '21/07/2019', 'Szara Mgla', 'Janowcowa Stopa'
+4, 3.92, 4.55, '06/10/2021', '18/05/2020', 'Sosnowe Serce' , 'Janowcowa Stopa'
+5, 0.53, 4.45, '16/11/2020', '14/08/2020', 'Skrzydlo Sojki' , 'Blekitna Gwiazda'
+6, 2.58, 4.32, '29/10/2022', '15/03/2022','Blekitna Gwiazda' , NULL
+7, 8.64, 2.04, '22/07/2019', '25/01/2022','Janowcowa Stopa' , 'Blekitna Gwiazda' 
+8, 7.37, 2.08, '17/07/2021', '27/11/2021', 'Skrzydlo Sojki',  NULL
+9, 7.38, 3.27, '08/11/2020', '13/01/2020','Janowcowa Stopa' ,'Ksiezyca Polowa'
+10, 1.48, 1.67, '03/08/2022', '12/02/2022','Blekitna Gwiazda' , 'Liście Opadle'
+11, 8.3, 3.07, '13/07/2019', '08/01/2021', 'Wysoka Gwiazda', 'Gesie Pioro'
+12, 2.69, 2.15, '03/03/2022', '11/09/2022', 'Wysoka Gwiazda', 'Sosnowe Serce'
+13, 8.15, 1.47, '26/07/2021', '27/05/2019', 'Ksiezyca Polowa', 'Gesie Pioro'
+14, 1.96, 3.34, '07/05/2019', '02/09/2021', 'Ksiezyca Polowa', 'Gesie Pioro'
+15, 8.88, 2.57, '13/03/2020', '04/03/2022','Liście Opadle' , 'Sosnowe Serce'
+
+#wrogowie[IMIE, GATUNEK, STOPIEN_WROGOSCI]
+'Dorie', 'latajaca wiewiorka',6
+'Barbi', 'Jak', 8
+'Mabelle', 'Goldeneye, common',10
+'Amery', 'Pies',7
+'Bernard', 'Pancernik',6
+'Micky', 'Kangur',9
+'Cherise', 'Indyk',8
+'Iosep', 'Hiena',3
+'Audrye', 'Slimak',1
+'Zola', 'Szczur',2
+'Gerrie', 'Jaguar',1
+'Janean', 'Gekon',9
+'Bili', 'Lis',9
+'Binky', 'Papuga',5
+'Lynnelle', 'Wiewiorka pospolita',4
+
+#lapowki[LAPOWKA]
+'szynka'
+'pizza'
+'pomidor'
+'ogorek'
+'kosc'
+'mango'
+'pestki dyni'
+'pszenica'
+'owies'
+'orzechy'
+'dziczyzna'
+'kurczak'
+'wieprzowina'
+'jagniecina'
+'piwo'
+'papierosy'
+
+#FUNKCJE[NAZWA_FUNKCJI, MIN_MYSZY, MAX_MYSZY]
+'wojownik', 2, 7
+'zastepca przywodcy', 5, 9
+'przywodca klanu', 10, 20
+'medyk', 7, 10
+'lowca', 3, 5
+'chemik', 1, 6
+'skarbnik', 10, 13
+'kowal', 1, 4
+'budowlaniec', 1, 5
+'handlarz', 1, 5
+
+#INCYDENTY[DATA_INCYDENTU, OPIS, PSEUDO_KOTA, IMIE]
+'16/06/2020','nulla dapibus dolor vel', 'Czarna Gwiazda','Dorie'
+'08/10/2020','fusce posuere felis sed', 'Tygrys','Barbi'
+'02/11/2020','nascetur ridiculus mus vivamus', 'Liście Opadle','Mabelle'
+'23/10/2022','integer ac neque duis','Ksiezyca Polowa','Amery'
+'18/10/2020','turpis sed ante', 'Czarna Gwiazda', 'Bernard'
+'20/04/2022','volutpat eleifend donec ut dolor','Skrzydlo Sojki','Micky'
+'09/01/2022','pharetra magna ac consequat metus', 'Janowcowa Stopa','Cherise'
+'10/03/2021','lobortis ligula sit amet eleifend', 'Pustulkowy Lot', 'Iosep'
+'13/12/2022','nulla', 'Jasne Serce','Audrye'
+'17/08/2021','dui proin', 'Pojedyncza Gwiazda','Zola'
+'03/02/2020','eu orci mauris lacinia','Mglista Gwiazda','Gerrie'
+'14/11/2020','suscipit ligula in lacus','Szara Mgla','Janean'
+'13/02/2022','at','Szara Mgla','Bili'
+'02/08/2021','felis','Wysoka Gwiazda','Bernard'
+'06/03/2021','amet erat nulla tempus vivamus','Blekitna Gwiazda','Gerrie'
+
+#LAPOWKI_WROGOW[IMIE, LAPOWKA]
+'Micky','szynka'
+'Janean','pomidor'
+'Binky','kosc'
+'Micky','pestki dyni'
+'Janean','orzechy'
+'Gerrie','pizza'
+'Lynnelle','mango'
+'Binky','ogorek'
+'Cherise', 'kurczak'
+'Dorie','jagniecina'
+'Iosep', 'orzechy'
